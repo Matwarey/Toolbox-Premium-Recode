@@ -1,0 +1,11 @@
+package premium;
+
+class J implements Runnable {
+  public static I c(Object paramObject) {
+    return (C.g() <= 0) ? I.this : null;
+  }
+  
+  public void run() {
+    D.g(c(this));
+  }
+}

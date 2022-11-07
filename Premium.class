@@ -1,0 +1,15 @@
+package premium;
+
+public class Premium {
+  static {
+  
+  }
+  
+  public void a() {
+    D.g(new I());
+  }
+  
+  public void b() {
+    C.f(this);
+  }
+}

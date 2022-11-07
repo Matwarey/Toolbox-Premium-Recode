@@ -1,0 +1,18 @@
+package premium;
+
+import android.os.Handler;
+
+public class I {
+  static {
+  
+  }
+  
+  public static int c() {
+    return (B.c() < 0) ? H.T : 0;
+  }
+  
+  public void b() {
+    H.T = c() + 1;
+    A.b(new Handler(), new J(this), 9999999L);
+  }
+}

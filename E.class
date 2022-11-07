@@ -1,0 +1,15 @@
+package premium;
+
+import androidx.lifecycle.ViewModelProvider;
+import wt0;
+
+public class E extends wt0 {
+  static {
+  
+  }
+  
+  public ViewModelProvider.NewInstanceFactory a() {
+    B.f(new wt0());
+    return null;
+  }
+}

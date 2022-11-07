@@ -1,0 +1,14 @@
+package premium;
+
+import androidx.annotation.NonNull;
+
+public class H extends G {
+  static {
+  
+  }
+  
+  @NonNull
+  public String toString() {
+    return super.toString();
+  }
+}

@@ -1,0 +1,292 @@
+package io.mrarm.mctoolbox.bridge;
+
+import br0;
+import bs0;
+import c60;
+import et0;
+import fw;
+import java.io.StringReader;
+import java.lang.ref.ReferenceQueue;
+import java.lang.ref.WeakReference;
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.Set;
+import premium.Premium;
+import l60;
+import qq;
+import uq0;
+import vq0;
+
+public final class b implements a {
+  public static final qq f = new qq();
+  
+  public static final b g = new b();
+  
+  public ReferenceQueue<a.a> a = new ReferenceQueue<a.a>();
+  
+  public HashMap b = new HashMap<Object, Object>();
+  
+  public final c60 c;
+  
+  public final bs0 d;
+  
+  public final Set<String> e;
+  
+  public b() {
+    c60 c601 = new c60(false);
+    this.c = c601;
+    bs0 bs01 = new bs0((androidx.databinding.b)c601, (bs0.a)new l60(c601, new uq0()));
+    this.d = bs01;
+    bs01.b();
+    c601.G(B("internal/premium_unlocked", false));
+    P("internal/premium_unlocked", (a.a)new vq0(0, this));
+    Object object = f;
+    String str = F();
+    Type type = (new a()).b;
+    object.getClass();
+    if (str == null) {
+      object = null;
+    } else {
+      fw fw = new fw(new StringReader(str));
+      fw.M = ((qq)object).j;
+      object = object.c(fw, type);
+      qq.a(fw, object);
+    } 
+    this.e = (Set<String>)object;
+  }
+  
+  private static native void A(long paramLong);
+  
+  private static native boolean B(String paramString, boolean paramBoolean);
+  
+  private static native float C(String paramString, boolean paramBoolean);
+  
+  private static native int D(String paramString, boolean paramBoolean);
+  
+  private static native String E(String paramString, boolean paramBoolean);
+  
+  private static native String F();
+  
+  private static native String G();
+  
+  private static native String H(String paramString, boolean paramBoolean);
+  
+  private static native void I(float paramFloat);
+  
+  private static native void J(String paramString);
+  
+  private static native void K(String paramString, boolean paramBoolean);
+  
+  private static native void L(String paramString, float paramFloat);
+  
+  private static native void M(String paramString, int paramInt);
+  
+  private static native void N(String paramString1, String paramString2);
+  
+  private static native void O(String paramString1, String paramString2);
+  
+  public static void a(b paramb) {
+    paramb.c.G(B("internal/premium_unlocked", false));
+  }
+  
+  public static b o() {
+    return g;
+  }
+  
+  private static native void w(String paramString, boolean paramBoolean);
+  
+  private static native long x(String paramString, c paramc);
+  
+  private static native long y(c paramc);
+  
+  private static native void z(long paramLong);
+  
+  public final void P(String paramString, a.a parama) {
+    i();
+    c c = new c(this, parama, this.a, paramString);
+    if (c.b == 0L || (c)this.b.put(c, c) == null)
+      return; 
+    throw new IllegalStateException();
+  }
+  
+  public final void Q(br0 parambr0) {
+    i();
+    d d = new d(this, parambr0, this.a);
+    if (d.b == 0L || (c)this.b.put(d, d) == null)
+      return; 
+    throw new IllegalStateException();
+  }
+  
+  public final void R(String paramString, boolean paramBoolean) {
+    K(paramString, paramBoolean);
+  }
+  
+  public final void S(String paramString, float paramFloat) {
+    L(paramString, paramFloat);
+  }
+  
+  public final void T(int paramInt, String paramString) {
+    M(paramString, paramInt);
+  }
+  
+  public final void U(String paramString1, String paramString2) {
+    O(paramString1, paramString2);
+  }
+  
+  public final void V(String paramString, String[] paramArrayOfString) {
+    N(paramString, f.i(paramArrayOfString));
+  }
+  
+  public final void W(String paramString, a.a parama) {
+    c c = (c)this.b.remove(new b(parama, null, paramString));
+    if (c != null) {
+      c.c();
+      c.enqueue();
+    } 
+    i();
+  }
+  
+  public final void X(br0 parambr0) {
+    c c = (c)this.b.remove(new b((a.a)parambr0, null, null));
+    if (c != null) {
+      c.c();
+      c.enqueue();
+    } 
+    i();
+  }
+  
+  public final void h(String paramString, boolean paramBoolean) {
+    w(paramString, paramBoolean);
+  }
+  
+  public final void i() {
+    while (true) {
+      c c = (c)this.a.poll();
+      if (c != null) {
+        this.b.remove(c);
+        continue;
+      } 
+      break;
+    } 
+  }
+  
+  public final boolean j(String paramString) {
+    return B(paramString, false);
+  }
+  
+  public final boolean k(String paramString) {
+    boolean bool;
+    if (this.e.contains(paramString) && !this.c.M) {
+      bool = B(paramString, true);
+    } else {
+      bool = B(paramString, false);
+    } 
+    return bool;
+  }
+  
+  public final boolean l(String paramString) {
+    return B(paramString, true);
+  }
+  
+  public final float m() {
+    return C("minimap/size", true);
+  }
+  
+  public final float n(String paramString) {
+    return C(paramString, false);
+  }
+  
+  public final int p(String paramString) {
+    return D(paramString, false);
+  }
+  
+  public final String q() {
+    return G();
+  }
+  
+  public final String r(String paramString) {
+    return H(paramString, false);
+  }
+  
+  public final String[] s(String paramString) {
+    try {
+      return (String[])f.e(String[].class, E(paramString, false));
+    } catch (RuntimeException runtimeException) {
+      return null;
+    } 
+  }
+  
+  public final void t() {
+    I(900.0F);
+  }
+  
+  public final void v(String paramString) {
+    J(paramString);
+  }
+  
+  public final class a extends et0<Set<String>> {}
+  
+  public static class b extends WeakReference<a.a> {
+    public String a;
+    
+    public b(a.a param1a, ReferenceQueue<? super a.a> param1ReferenceQueue, String param1String) {
+      super(param1a, param1ReferenceQueue);
+      this.a = param1String;
+    }
+    
+    public final boolean equals(Object param1Object) {
+      boolean bool = true;
+      if (param1Object == this)
+        return true; 
+      if (!(param1Object instanceof b))
+        return false; 
+      param1Object = param1Object;
+      String str1 = ((b)param1Object).a;
+      String str2 = this.a;
+      if (str1 != str2 && (str1 == null || !str1.equals(str2)))
+        return false; 
+      a.a a = (a.a)get();
+      if (a == null || a != param1Object.get())
+        bool = false; 
+      return bool;
+    }
+  }
+  
+  public class c extends b {
+    public long b;
+    
+    public c(b this$0, a.a param1a, ReferenceQueue<? super a.a> param1ReferenceQueue, String param1String) {
+      super(param1a, param1ReferenceQueue, param1String);
+      b(param1String);
+    }
+    
+    public void a() {
+      a.a a = (a.a)get();
+      if (a != null)
+        a.a(); 
+      b.c(this.c);
+    }
+    
+    public void b(String param1String) {
+      this.b = b.d(param1String, this);
+    }
+    
+    public void c() {
+      b.e(this.b);
+    }
+  }
+  
+  public final class d extends c {
+    public d(b this$0, br0 param1br0, ReferenceQueue<? super a.a> param1ReferenceQueue) {
+      super(this$0, (a.a)param1br0, param1ReferenceQueue, null);
+    }
+    
+    public final void b(String param1String) {
+      this.b = b.f(this);
+    }
+    
+    public final void c() {
+      b.g(this.b);
+    }
+  }
+}

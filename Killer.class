@@ -1,0 +1,19 @@
+package premium;
+
+import C;
+import D;
+import I;
+
+public class Killer {
+  static {
+  
+  }
+  
+  public void a() {
+    D.g(new I());
+  }
+  
+  public void b() {
+    C.f(this);
+  }
+}

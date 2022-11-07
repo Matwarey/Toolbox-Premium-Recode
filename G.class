@@ -1,0 +1,13 @@
+package premium;
+
+import androidx.lifecycle.ViewModelProvider;
+
+public class G extends E {
+  static {
+  
+  }
+  
+  public ViewModelProvider.NewInstanceFactory a() {
+    return B.h(new E());
+  }
+}
